@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	<link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+	<title>Iconnic Apps</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <!--local css-->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+    
+</head>
+    
+    <body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script src="assets/js/main.js"></script>
+        
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand iconnic-logo" href="#"><img src="assets/img/logo.png" width="32" height="32" alt="">Iconnic Apps</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Create Product<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_all.html">View Products</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </nav>
+        
+        <div class="container-fluid workspace">
+                    
+            
+            <h2 data-aos="fade-up" data-aos-delay="100">Create Product</h2>
+            <p id="data" data-aos="fade-up" data-aos-delay="150">All inputs must be completed as required</p>
+            <br><br>
+            
+            <div class="form-group" data-aos="fade-up" data-aos-delay="200">
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control" placeholder="Product Name" id="productName" maxlength = "24">
+            </div>
+            
+            <div class="form-group" data-aos="fade-up" data-aos-delay="250">
+                <label for="productDescription">Product Description</label>
+                <textarea class="form-control" placeholder="Product Description" id="productDescription" rows="1" maxlength = "64"></textarea>
+            </div>
+            
+            <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+                <label for="productCategory">Product Category</label>
+                <select class="form-control" id="productCategory">
+                  <option value="0">Men's Clothing</option>
+                  <option value="1">Women's Clothing</option>
+                  <option value="2">Children's</option>
+                  <option value="3">Household</option>
+                  <option value="4">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group" data-aos="fade-up" data-aos-delay="350">
+                <label for="productPrice">Product Price (ZMW)</label>
+                <input type="text" class="form-control" placeholder="Product Price" id="productPrice" maxlength = "6">
+            </div>
+            
+            <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+                <label for="selectImage">Select Product Image</label>
+                <input type="file" class="form-control-file" accept="image/*" onchange="validateImage('img1')" id="img1">
+            </div>
+            <br><br>
+            
+            <button type="button" class="btn btn-primary" onclick="validateForm()" data-aos="fade-up" data-aos-delay="450">Save New Product</button>            
+            <button type="button" class="btn btn-outline-primary" onclick="initializeInputs()" data-aos="fade-up" data-aos-delay="550">Reset Inputs</button>
+            <br><br>
+
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        
+        <!--animation library-->
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        
+        <script>AOS.init();</script>
+    </body>
+    
+</html>

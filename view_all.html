@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+	<title>Iconnic Apps</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <!--local css-->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+    
+</head>
+    
+    <body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script src="assets/js/main.js"></script>
+        
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light justify-content-between">
+            <a class="navbar-brand iconnic-logo" href="#"><img src="assets/img/logo.png" width="32" height="32" alt="">Iconnic Apps</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="create.html">Create Product</a>
+                    </li>
+                    
+                    <li class="nav-item  active">
+                        <a class="nav-link" href="#" onclick="getProductsData()">View Products<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#" onclick="loadProductsByFilter('0')">Men's Only</a>
+                          <a class="dropdown-item" href="#" onclick="loadProductsByFilter('1')">Women's Only</a>
+                            <a class="dropdown-item" href="#" onclick="loadProductsByFilter('2')">Children's Only</a>
+                            <a class="dropdown-item" href="#" onclick="loadProductsByFilter('3')">Household Only</a>
+                            <a class="dropdown-item" href="#" onclick="loadProductsByFilter('4')">Other</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#" onclick="getProductsData()">All Products</a>
+                        </div>
+                    </li>
+                    
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    
+                </ul>
+            </div>
+            
+        </nav>
+        
+        <div class="container-fluid workspace">
+                    
+            
+            <h2 data-aos="fade-up" data-aos-delay="100">Product List</h2>
+            <p id="data" data-aos="fade-up" data-aos-delay="150">Click on product to View/Edit</p>
+            <br><br>
+            
+            <script>getProductsData()</script>
+            
+            <div id="loadArea" class="container-fluid"></div>
+
+        </div>
+                
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        
+        <!--animation library-->
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        
+        <script>AOS.init();</script>
+    </body>
+    
+</html>
