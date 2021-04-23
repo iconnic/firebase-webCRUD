@@ -1,4 +1,8 @@
 # firebase-webCRUD
-Starter Website with all firebase CRUD functions and bootstrap 
+Starter WebAPP with all Firebase C.R.U.D functions and Bootstrap implementation 
 
-locate the 'main.js' file in the js folder and edit the 'firebaseConfig' details with your own firebase details
+Quick and easy to startup
+
+Setup your project:
+1. Locate the 'main.js' file in the 'js' folder
+2. Edit the 'firebaseConfig' section with your own Firebase details
